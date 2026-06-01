@@ -57,16 +57,31 @@
       </div>
     </div>
     <div class="hero-visual">
-      <div class="code-card">
-        <div class="code-dots"><span></span><span></span><span></span></div>
-        <pre><code><span class="kw">const</span> harsadh = {
-  <span class="key">role</span>: <span class="str">"Full-Stack Dev"</span>,
-  <span class="key">stack</span>: [<span class="str">"React"</span>, <span class="str">"TypeScript"</span>,
-          <span class="str">"Python"</span>, <span class="str">"AWS"</span>],
-  <span class="key">university</span>: <span class="str">"UVic CS"</span>,
-  <span class="key">passion</span>: <span class="str">"Building useful things"</span>,
-  <span class="key">openTo</span>: <span class="str">"Opportunities ✓"</span>,
-};</code></pre>
+      <div class="now-card">
+        <p class="now-label">⚡ Now</p>
+        <div class="now-row">
+          <span class="now-key">Building</span>
+          <span class="now-val">Web Notes · ScholarU</span>
+        </div>
+        <div class="now-row">
+          <span class="now-key">Learning</span>
+          <span class="now-val">Distributed systems · LLM tooling</span>
+        </div>
+        <div class="now-row">
+          <span class="now-key">Reading</span>
+          <span class="now-val">Designing Data-Intensive Apps</span>
+        </div>
+        <div class="now-row">
+          <span class="now-key">Playing</span>
+          <span class="now-val">Cricket · Basketball · Football</span>
+        </div>
+        <div class="now-row">
+          <span class="now-key">Based in</span>
+          <span class="now-val">Victoria, BC 🍁</span>
+        </div>
+        <div class="now-footer">
+          <span class="now-dot"></span> Updated June 2026
+        </div>
       </div>
     </div>
     <div class="scroll-hint">
@@ -210,6 +225,28 @@
       <h2 class="section-title">Projects</h2>
       <div class="projects-grid">
 
+        <!-- Web Notes -->
+        <div class="project-card reveal tilt-card featured-project">
+          <div class="project-top">
+            <span class="project-icon">📝</span>
+            <div class="project-links">
+              <a href="https://github.com/jevdboi3303" target="_blank" rel="noopener" title="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-badge">🏆 Hackathon 2nd Place</div>
+          <h3>Web Notes</h3>
+          <p class="project-sub">Chrome Extension · Note-taking on the web</p>
+          <p class="project-hook">Reading something important shouldn't mean switching tabs to take notes.</p>
+          <p class="project-desc">Chrome extension that lets you annotate and save notes directly on any webpage, synced in real-time via <strong>Supabase</strong>. Built at a hackathon and placed 2nd.</p>
+          <div class="project-tags">
+            <span>Chrome Extension</span><span>Supabase</span><span>JavaScript</span>
+          </div>
+          <span class="project-date">2025</span>
+        </div>
+
+        <!-- ScholarU -->
         <div class="project-card reveal tilt-card">
           <div class="project-top">
             <span class="project-icon">🎓</span>
@@ -221,13 +258,15 @@
           </div>
           <h3>ScholarU</h3>
           <p class="project-sub">Scholarship Discovery Platform</p>
-          <p class="project-desc">Full-stack scholarship search tool for UVic students — filtering by academic year, faculty, gender, and more. Reduced average scholarship discovery time from <strong>~2 hours to under 5 minutes</strong>. Actively used by CS faculty peers.</p>
+          <p class="project-hook">UVic students were missing scholarships buried in PDFs and outdated portals.</p>
+          <p class="project-desc">Full-stack search tool filtering by academic year, faculty, gender, and more. Reduced average discovery time from <strong>~2 hours to under 5 minutes</strong>. Actively used by CS peers.</p>
           <div class="project-tags">
             <span>Full Stack</span><span>React</span><span>Search &amp; Filtering</span>
           </div>
           <span class="project-date">May 2024 – Present</span>
         </div>
 
+        <!-- DermaCheck -->
         <div class="project-card reveal tilt-card">
           <div class="project-top">
             <span class="project-icon">🩺</span>
@@ -239,13 +278,15 @@
           </div>
           <h3>DermaCheck</h3>
           <p class="project-sub">AI Skin Condition Classifier</p>
-          <p class="project-desc">ML model to classify skin lesions — including early-stage melanoma — from camera images, achieving high accuracy on fine-grained visual variation. End-to-end pipeline with <strong>video calling</strong> and <strong>blockchain-based health records</strong>, connecting patients to dermatologists.</p>
+          <p class="project-hook">Early melanoma detection shouldn't require a specialist waitlist.</p>
+          <p class="project-desc">ML model classifying skin lesions from camera images, with an end-to-end patient pipeline including video calling and blockchain-based health records.</p>
           <div class="project-tags">
-            <span>Machine Learning</span><span>Python</span><span>Blockchain</span><span>Computer Vision</span>
+            <span>Machine Learning</span><span>Python</span><span>Computer Vision</span>
           </div>
-          <span class="project-date">Aug 2022 – Jan 2024</span>
+          <span class="project-date">2022 – 2024</span>
         </div>
 
+        <!-- Accident Prevention -->
         <div class="project-card reveal tilt-card">
           <div class="project-top">
             <span class="project-icon">🚗</span>
@@ -257,24 +298,12 @@
           </div>
           <h3>Accident Prevention System</h3>
           <p class="project-sub">ML Mobile App</p>
-          <p class="project-desc">Led UI/UX design in Adobe XD and implemented <strong>ML-powered real-time hazard detection</strong> in a mobile app, with push notifications for driver alerts. Owned the full design-to-deployment cycle — wireframes, branding, animation, and notification logic.</p>
+          <p class="project-hook">Distracted driving causes most accidents — ML can flag hazards before they happen.</p>
+          <p class="project-desc">ML-powered real-time hazard detection in a mobile app with driver push alerts. Led the full design-to-deployment cycle in Adobe XD — wireframes, branding, and animation.</p>
           <div class="project-tags">
             <span>Machine Learning</span><span>Mobile</span><span>Adobe XD</span><span>UI/UX</span>
           </div>
-          <span class="project-date">Mar 2022 – Jul 2023</span>
-        </div>
-
-        <div class="project-card reveal feature-card">
-          <div class="project-top">
-            <span class="project-icon">📄</span>
-          </div>
-          <h3>IBDP Extended Essay</h3>
-          <p class="project-sub">Computer Science Research Paper</p>
-          <p class="project-desc">Benchmarked <strong>RandomX vs Scrypt</strong> mining algorithms on a Raspberry Pi, measuring hash rate, CPU clock, and thermal performance — published as a formal <strong>4,000-word research paper</strong>.</p>
-          <div class="project-tags">
-            <span>Research</span><span>Python</span><span>Raspberry Pi</span><span>Cryptography</span>
-          </div>
-          <span class="project-date">2021 – 2023</span>
+          <span class="project-date">2022 – 2023</span>
         </div>
 
       </div>
