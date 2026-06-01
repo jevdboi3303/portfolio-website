@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harsadh Vikhaas — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Cursor glow -->
+  <div id="cursor-glow"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">HV</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact" class="btn-nav">Contact</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Aurora canvas -->
+  <canvas id="aurora"></canvas>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="status-chip">
+        <span class="status-dot"></span>
+        Open to co-op &amp; internship opportunities
+      </div>
+      <p class="hero-tag">Hey, I'm</p>
+      <h1 class="hero-name">Harsadh Vikhaas<br /><span class="accent">Rajesh Kumar</span></h1>
+      <p class="hero-sub"><span id="typed-role"></span><span class="cursor-blink">|</span> &amp; CS Student at UVic.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">See my work</a>
+        <a href="mailto:harsadh32@gmail.com" class="btn-ghost">Get in touch</a>
+      </div>
+      <div class="hero-links">
+        <a href="https://github.com/jevdboi3303" target="_blank" rel="noopener" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-card">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <pre><code><span class="kw">const</span> harsadh = {
+  <span class="key">role</span>: <span class="str">"Full-Stack Dev"</span>,
+  <span class="key">stack</span>: [<span class="str">"React"</span>, <span class="str">"TypeScript"</span>,
+          <span class="str">"Python"</span>, <span class="str">"AWS"</span>],
+  <span class="key">university</span>: <span class="str">"UVic CS"</span>,
+  <span class="key">passion</span>: <span class="str">"Building useful things"</span>,
+  <span class="key">openTo</span>: <span class="str">"Opportunities ✓"</span>,
+};</code></pre>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span>Full-Stack Dev</span><span class="dot">✦</span>
+        <span>Sports Lover</span><span class="dot">✦</span>
+        <span>React &amp; TypeScript</span><span class="dot">✦</span>
+        <span>Machine Learning</span><span class="dot">✦</span>
+        <span>UVic CS</span><span class="dot">✦</span>
+        <span>Cricket</span><span class="dot">✦</span>
+        <span>Open Source</span><span class="dot">✦</span>
+        <span>Basketball</span><span class="dot">✦</span>
+        <span>Python</span><span class="dot">✦</span>
+        <span>Football</span><span class="dot">✦</span>
+        <span>Problem Solver</span><span class="dot">✦</span>
+        <span>Victoria BC</span><span class="dot">✦</span>
+        <span>Team Player</span><span class="dot">✦</span>
+        <span>AWS</span><span class="dot">✦</span>
+        <span>Always Learning</span><span class="dot">✦</span>
+      </div>
+      <!-- duplicate for seamless loop -->
+      <div class="marquee-content" aria-hidden="true">
+        <span>Full-Stack Dev</span><span class="dot">✦</span>
+        <span>Sports Lover</span><span class="dot">✦</span>
+        <span>React &amp; TypeScript</span><span class="dot">✦</span>
+        <span>Machine Learning</span><span class="dot">✦</span>
+        <span>UVic CS</span><span class="dot">✦</span>
+        <span>Cricket</span><span class="dot">✦</span>
+        <span>Open Source</span><span class="dot">✦</span>
+        <span>Basketball</span><span class="dot">✦</span>
+        <span>Python</span><span class="dot">✦</span>
+        <span>Football</span><span class="dot">✦</span>
+        <span>Problem Solver</span><span class="dot">✦</span>
+        <span>Victoria BC</span><span class="dot">✦</span>
+        <span>Team Player</span><span class="dot">✦</span>
+        <span>AWS</span><span class="dot">✦</span>
+        <span>Always Learning</span><span class="dot">✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About <span class="accent">Me</span></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a Computer Science student at the <strong>University of Victoria</strong> (specializing in Software Systems), with hands-on experience building full-stack products that solve real problems.</p>
+          <p>Most recently I worked as a <strong>Full Stack Developer Co-op at BaroShift</strong>, where I shipped admin dashboards in React + TypeScript that reduced manual overhead by ~40%. I care about clean code, great UX, and shipping things that actually get used.</p>
+          <p>Outside of code I serve as a <strong>Community Leader</strong> in UVic residences — supporting 60+ students through mentorship, events, and crisis response.</p>
+          <div class="about-stats">
+            <div class="stat"><span class="stat-num" data-count="3" data-suffix="+">0</span><span class="stat-label">Years building</span></div>
+            <div class="stat"><span class="stat-num" data-count="98" data-suffix="%">0</span><span class="stat-label">CS50 score</span></div>
+            <div class="stat"><span class="stat-num" data-count="3" data-suffix="">0</span><span class="stat-label">Major projects</span></div>
+          </div>
+        </div>
+        <div class="about-edu">
+          <h3>Education</h3>
+          <div class="edu-card">
+            <div class="edu-icon">🎓</div>
+            <div>
+              <h4>University of Victoria</h4>
+              <p class="edu-degree">B.Sc. Computer Science — Software Systems</p>
+              <p class="edu-meta">Jan 2024 – Present · Victoria, BC</p>
+              <p class="edu-courses">Algorithms, Software Dev Methods, Networks, HCI, Data Mining, Probability &amp; Statistics</p>
+            </div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-icon">📚</div>
+            <div>
+              <h4>JBCN International School</h4>
+              <p class="edu-degree">IB Diploma — HL: CS, Mathematics, Physics</p>
+              <p class="edu-meta">Jun 2021 – May 2023 · Mumbai, India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <div>
+                <h3>Full Stack Developer Co-op</h3>
+                <p class="tl-company">BaroShift <span class="tl-faded">(formerly MyTorso.ai)</span></p>
+              </div>
+              <span class="tl-date">Jan – Apr 2026</span>
+            </div>
+            <p class="tl-location">📍 Vancouver, BC (Remote)</p>
+            <ul class="tl-bullets">
+              <li>Engineered internal admin dashboards in <strong>React, TypeScript, and Tailwind CSS</strong>, integrating AWS Cognito for authentication — cutting manual account-management overhead by an estimated <strong>40%</strong>.</li>
+              <li>Built user data override, session management, and audit-logging features, improving operational visibility and compliance workflows across 3 internal teams.</li>
+            </ul>
+            <div class="tl-tags">
+              <span>React</span><span>TypeScript</span><span>Tailwind CSS</span><span>AWS Cognito</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <div>
+                <h3>Community Leader</h3>
+                <p class="tl-company">UVic Residence Services</p>
+              </div>
+              <span class="tl-date">Apr 2025 – Present</span>
+            </div>
+            <p class="tl-location">📍 Victoria, BC</p>
+            <ul class="tl-bullets">
+              <li>Support a residence community of <strong>60+ students</strong> through peer mentoring, event programming, and first-response crisis intervention.</li>
+              <li>Developed conflict-resolution and de-escalation skills while coordinating with university staff and student services.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card reveal tilt-card">
+          <div class="project-top">
+            <span class="project-icon">🎓</span>
+            <div class="project-links">
+              <a href="https://github.com/jevdboi3303" target="_blank" rel="noopener" title="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>ScholarU</h3>
+          <p class="project-sub">Scholarship Discovery Platform</p>
+          <p class="project-desc">Full-stack scholarship search tool for UVic students — filtering by academic year, faculty, gender, and more. Reduced average scholarship discovery time from <strong>~2 hours to under 5 minutes</strong>. Actively used by CS faculty peers.</p>
+          <div class="project-tags">
+            <span>Full Stack</span><span>React</span><span>Search &amp; Filtering</span>
+          </div>
+          <span class="project-date">May 2024 – Present</span>
+        </div>
+
+        <div class="project-card reveal tilt-card">
+          <div class="project-top">
+            <span class="project-icon">🩺</span>
+            <div class="project-links">
+              <a href="https://github.com/jevdboi3303" target="_blank" rel="noopener" title="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>DermaCheck</h3>
+          <p class="project-sub">AI Skin Condition Classifier</p>
+          <p class="project-desc">ML model to classify skin lesions — including early-stage melanoma — from camera images, achieving high accuracy on fine-grained visual variation. End-to-end pipeline with <strong>video calling</strong> and <strong>blockchain-based health records</strong>, connecting patients to dermatologists.</p>
+          <div class="project-tags">
+            <span>Machine Learning</span><span>Python</span><span>Blockchain</span><span>Computer Vision</span>
+          </div>
+          <span class="project-date">Aug 2022 – Jan 2024</span>
+        </div>
+
+        <div class="project-card reveal tilt-card">
+          <div class="project-top">
+            <span class="project-icon">🚗</span>
+            <div class="project-links">
+              <a href="https://github.com/jevdboi3303" target="_blank" rel="noopener" title="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>Accident Prevention System</h3>
+          <p class="project-sub">ML Mobile App</p>
+          <p class="project-desc">Led UI/UX design in Adobe XD and implemented <strong>ML-powered real-time hazard detection</strong> in a mobile app, with push notifications for driver alerts. Owned the full design-to-deployment cycle — wireframes, branding, animation, and notification logic.</p>
+          <div class="project-tags">
+            <span>Machine Learning</span><span>Mobile</span><span>Adobe XD</span><span>UI/UX</span>
+          </div>
+          <span class="project-date">Mar 2022 – Jul 2023</span>
+        </div>
+
+        <div class="project-card reveal feature-card">
+          <div class="project-top">
+            <span class="project-icon">📄</span>
+          </div>
+          <h3>IBDP Extended Essay</h3>
+          <p class="project-sub">Computer Science Research Paper</p>
+          <p class="project-desc">Benchmarked <strong>RandomX vs Scrypt</strong> mining algorithms on a Raspberry Pi, measuring hash rate, CPU clock, and thermal performance — published as a formal <strong>4,000-word research paper</strong>.</p>
+          <div class="project-tags">
+            <span>Research</span><span>Python</span><span>Raspberry Pi</span><span>Cryptography</span>
+          </div>
+          <span class="project-date">2021 – 2023</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <h3>Languages</h3>
+          <div class="skill-pills">
+            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />Python</span>
+            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />JavaScript</span>
+            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" />TypeScript</span>
+            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />Java</span>
+            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" />SQL</span>
+            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" />C</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Frontend</h3>
+          <div class="skill-pills">
+            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />React</span>
+            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" />Tailwind CSS</span>
+            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />HTML / CSS</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Tools &amp; Cloud</h3>
+          <div class="skill-pills">
+            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" />AWS</span>
+            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />Node.js</span>
+            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />Git</span>
+            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="filter:invert(1) brightness(2)"/>GitHub</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Spoken Languages</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">🇬🇧 English</span>
+            <span class="skill-pill">🇪🇸 Spanish</span>
+            <span class="skill-pill">🇮🇳 Tamil</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="certs-section">
+        <h3>Certifications</h3>
+        <div class="certs-grid">
+          <div class="cert-card reveal">
+            <span class="cert-icon">🏛️</span>
+            <div>
+              <h4>CS50 — Harvard University</h4>
+              <p>Scored <strong>98%</strong> · C, Python, SQL, JavaScript · Capstone: Smart Unlock (facial-recognition security app)</p>
+              <span class="cert-date">Jun – Sep 2022</span>
+            </div>
+          </div>
+          <div class="cert-card reveal">
+            <span class="cert-icon">🐍</span>
+            <div>
+              <h4>Scientific Computing with Python — freeCodeCamp</h4>
+              <p>5 advanced Python projects covering scientific computation, data formatting, and CLI tooling.</p>
+              <span class="cert-date">Sep – Dec 2022</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container contact-container">
+      <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+      <p class="contact-sub">I'm open to internships, co-op roles, and interesting projects. Feel free to reach out.</p>
+      <div class="contact-cards">
+        <a href="mailto:harsadh32@gmail.com" class="contact-card">
+          <span class="contact-icon">✉️</span>
+          <span>harsadh32@gmail.com</span>
+        </a>
+        <a href="https://github.com/jevdboi3303" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </span>
+          <span>github.com/jevdboi3303</span>
+        </a>
+        <div class="contact-card no-link">
+          <span class="contact-icon">📍</span>
+          <span>Victoria, BC, Canada</span>
+        </div>
+      </div>
+      <a href="mailto:harsadh32@gmail.com" class="btn-primary btn-large">Say Hello</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Designed &amp; built by Harsadh Vikhaas Rajesh Kumar · 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
