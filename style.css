@@ -596,6 +596,53 @@ footer {
   transform: translateY(0);
 }
 
+/* ── Hero value prop ── */
+.hero-value {
+  font-size: 0.9rem;
+  color: var(--text);
+  max-width: 420px;
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+  border-left: 2px solid var(--accent);
+  padding-left: 0.85rem;
+}
+.hero-value strong { color: var(--accent-2); }
+@media (max-width: 900px) {
+  .hero-value { margin: 0 auto 0.75rem; text-align: left; }
+}
+
+/* ── Resume button ── */
+.btn-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  border-color: var(--accent-2) !important;
+  color: var(--accent-2) !important;
+}
+.btn-resume:hover {
+  background: rgba(208, 189, 244, 0.1) !important;
+}
+
+/* ── Featured timeline card ── */
+.tl-featured {
+  border-color: rgba(132, 88, 179, 0.5);
+  background: linear-gradient(135deg, var(--bg-card) 80%, rgba(132,88,179,0.07));
+}
+.tl-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(132, 88, 179, 0.2);
+  color: var(--accent-2);
+  border: 1px solid rgba(132, 88, 179, 0.35);
+  padding: 2px 9px;
+  border-radius: 20px;
+  margin-bottom: 0.4rem;
+}
+
 /* ── Status chip ── */
 .status-chip {
   display: inline-flex;
@@ -609,6 +656,7 @@ footer {
   padding: 5px 14px;
   border-radius: 20px;
   margin-bottom: 1.25rem;
+  white-space: nowrap;
 }
 .status-dot {
   width: 8px; height: 8px;
