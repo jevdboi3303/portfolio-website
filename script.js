@@ -75,7 +75,7 @@ document.addEventListener('mouseleave', () => { glow.style.opacity = '0'; });
 
 /* ── Typing animation ── */
 (() => {
-  const roles = ['Full-Stack Developer', 'ML Engineer', 'UI/UX Thinker', 'Open Source Builder'];
+  const roles = ['Full-Stack Developer', 'CS Student at UVic', 'ML Engineer', 'UI/UX Thinker', 'Open Source Builder'];
   const el = document.getElementById('typed-role');
   let ri = 0, ci = 0, deleting = false;
 
