@@ -227,6 +227,7 @@ a { text-decoration: none; color: inherit; }
 .hero-links {
   display: flex;
   gap: 1rem;
+  justify-content: center;
 }
 .hero-links a {
   color: var(--text-muted);
