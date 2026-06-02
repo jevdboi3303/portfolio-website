@@ -191,6 +191,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 2rem;
   white-space: normal;
   word-break: break-word;
+  text-align: center;
 }
 .hero-cta {
   display: flex;
