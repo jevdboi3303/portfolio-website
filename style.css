@@ -603,8 +603,6 @@ footer {
   max-width: 420px;
   margin-bottom: 0.75rem;
   line-height: 1.7;
-  border-left: 2px solid var(--accent);
-  padding-left: 0.85rem;
 }
 .hero-value strong { color: var(--accent-2); }
 @media (max-width: 900px) {
