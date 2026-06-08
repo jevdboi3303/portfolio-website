@@ -1,7 +1,8 @@
 /* ── Scroll progress bar ── */
 const progressBar = document.getElementById('scroll-progress');
 window.addEventListener('scroll', () => {
-  const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+  const scrollable = document.body.scrollHeight - window.innerHeight;
+  const pct = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
   progressBar.style.width = pct + '%';
 }, { passive: true });
 
@@ -36,7 +37,7 @@ document.addEventListener('mouseleave', () => { glow.style.opacity = '0'; });
 (() => {
   const canvas = document.getElementById('aurora');
   const ctx = canvas.getContext('2d');
-  let W, H, t = 0;
+  let W, H, t = 0, animId;
 
   function resize() {
     W = canvas.width = window.innerWidth;
@@ -68,8 +69,14 @@ document.addEventListener('mouseleave', () => { glow.style.opacity = '0'; });
       ctx.arc(cx, cy, rad, 0, Math.PI * 2);
       ctx.fill();
     });
-    requestAnimationFrame(draw);
+    animId = requestAnimationFrame(draw);
   }
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) cancelAnimationFrame(animId);
+    else draw();
+  });
+
   draw();
 })();
 
@@ -77,6 +84,12 @@ document.addEventListener('mouseleave', () => { glow.style.opacity = '0'; });
 (() => {
   const roles = ['Full-Stack Developer', 'CS Student at UVic', 'ML Engineer', 'UI/UX Thinker', 'Open Source Builder'];
   const el = document.getElementById('typed-role');
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    el.textContent = roles[0];
+    return;
+  }
+
   let ri = 0, ci = 0, deleting = false;
 
   function type() {
@@ -96,11 +109,10 @@ document.addEventListener('mouseleave', () => { glow.style.opacity = '0'; });
 /* ── Scroll reveal ── */
 const revealEls = document.querySelectorAll('.reveal');
 const revealObs = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), i * 80);
-      revealObs.unobserve(entry.target);
-    }
+  const hitting = entries.filter(e => e.isIntersecting);
+  hitting.forEach((entry, i) => {
+    setTimeout(() => entry.target.classList.add('visible'), i * 80);
+    revealObs.unobserve(entry.target);
   });
 }, { threshold: 0.12 });
 revealEls.forEach(el => revealObs.observe(el));
@@ -113,10 +125,10 @@ const countObs = new IntersectionObserver((entries) => {
     const el = entry.target;
     const target = parseInt(el.dataset.count);
     const suffix = el.dataset.suffix || '';
-    let start = 0;
+    let start = null;
     const dur = 1200;
     const step = (timestamp) => {
-      if (!start) start = timestamp;
+      if (start === null) start = timestamp;
       const pct = Math.min((timestamp - start) / dur, 1);
       el.textContent = Math.floor(pct * target) + suffix;
       if (pct < 1) requestAnimationFrame(step);
@@ -145,12 +157,13 @@ document.querySelectorAll('.tilt-card').forEach(card => {
 const sections = document.querySelectorAll('section[id]');
 const navItems = document.querySelectorAll('.nav-links a[href^="#"]');
 const sectionObs = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navItems.forEach(a => a.classList.remove('active'));
-      const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-      if (active) active.classList.add('active');
-    }
-  });
+  const top = entries
+    .filter(e => e.isIntersecting)
+    .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+  if (top) {
+    navItems.forEach(a => a.classList.remove('active'));
+    const link = document.querySelector(`.nav-links a[href="#${top.target.id}"]`);
+    if (link) link.classList.add('active');
+  }
 }, { rootMargin: '-40% 0px -55% 0px' });
 sections.forEach(s => sectionObs.observe(s));

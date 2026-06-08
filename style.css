@@ -860,6 +860,14 @@ footer {
   .certs-grid { grid-template-columns: 1fr; }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation-play-state: paused; }
+  .scroll-line { animation: none; }
+  .status-dot, .now-dot { animation: none; }
+  .cursor-blink { animation: none; opacity: 1; }
+  .reveal { transition: none; opacity: 1; transform: none; }
+}
+
 @media (max-width: 640px) {
   .nav-links { display: none; }
   .nav-links.open {
