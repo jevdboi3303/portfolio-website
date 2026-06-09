@@ -543,6 +543,14 @@ a { text-decoration: none; color: inherit; }
 .cert-card h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 4px; }
 .cert-card p { font-size: 0.82rem; color: var(--text-muted); }
 .cert-card strong { color: var(--text); }
+.cert-link {
+  color: var(--accent-2);
+  text-decoration: none;
+  font-size: 0.78rem;
+  transition: opacity var(--transition);
+}
+.cert-link:hover { opacity: 0.75; }
+
 .cert-date {
   display: inline-block;
   margin-top: 6px;
