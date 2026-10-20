@@ -357,6 +357,14 @@ section:not(#hero) {
   transform: translate(4px, -4px);
 }
 
+.project-row--static {
+  cursor: default;
+}
+
+.project-row--static:hover {
+  padding-left: 0;
+}
+
 /* ── Experience List ── */
 .exp-list {
   display: flex;
