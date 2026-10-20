@@ -3,478 +3,264 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harsadh Vikhaas — Portfolio</title>
+  <title>Harsadh Vikhaas — Software Developer</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet" />
 </head>
 <body>
-
-  <!-- Scroll progress bar -->
-  <div id="scroll-progress"></div>
-
-  <!-- Cursor glow -->
-  <div id="cursor-glow"></div>
 
   <!-- NAV -->
   <nav id="navbar">
     <div class="nav-inner">
-      <span class="nav-logo">HV</span>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact" class="btn-nav">Contact</a></li>
-      </ul>
+      <div class="nav-left">
+        <span class="nav-name">Harsadh Vikhaas</span>
+        <span class="nav-role">Software Developer</span>
+      </div>
+      <div class="nav-pill" id="nav-pill">
+        <a href="#work" class="nav-pill-tab active" data-section="work">Work</a>
+        <a href="#about" class="nav-pill-tab" data-section="about">About</a>
+      </div>
+      <div class="nav-right">
+        <a href="https://github.com/jevdboi3303" target="_blank" rel="noopener" class="nav-link">GitHub ↗</a>
+        <a href="resume.pdf" download class="nav-link">Resume ↗</a>
+      </div>
       <button class="burger" id="burger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- Aurora canvas -->
-  <canvas id="aurora"></canvas>
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#work" class="mobile-link">Work</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="https://github.com/jevdboi3303" target="_blank" rel="noopener" class="mobile-link">GitHub ↗</a>
+    <a href="resume.pdf" download class="mobile-link">Resume ↗</a>
+    <a href="mailto:harsadh32@gmail.com" class="mobile-link">Email ↗</a>
+  </div>
 
   <!-- HERO -->
   <section id="hero">
-    <div class="hero-content">
-      <div class="status-chip">
-        <span class="status-dot"></span>
-        Computer Helpdesk Analyst Co-op · UVic · Fall 2026
+    <div class="hero-window">
+      <div class="window-chrome">
+        <div class="window-dots">
+          <span class="dot-red"></span>
+          <span class="dot-yellow"></span>
+          <span class="dot-green"></span>
+        </div>
       </div>
-      <p class="hero-tag">Hey, I'm</p>
-      <h1 class="hero-name">Harsadh Vikhaas<br /><span class="accent">Rajesh Kumar</span></h1>
-      <p class="hero-value">Full-stack developer with two industry co-ops · <strong>BaroShift</strong> &amp; <strong>UVic</strong> · Building things people actually use.</p>
-      <p class="hero-sub"><span id="typed-role"></span><span class="cursor-blink">|</span></p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn-primary">See my work</a>
-        <a href="resume.pdf" download class="btn-ghost btn-resume">⬇ Resume</a>
-        <a href="mailto:harsadh32@gmail.com" class="btn-ghost">Get in touch</a>
+      <div class="window-body">
+        <h1 class="hero-headline">
+          I build software,<br />systems &amp; <em>solutions.</em>
+        </h1>
+        <div class="hero-sub">
+          <p class="hero-sub-primary">Full-stack developer. Based in Victoria, BC.</p>
+          <p class="hero-sub-secondary">Co-op at BaroShift &amp; UVic · CS @ UVic</p>
+        </div>
       </div>
-      <div class="hero-links">
-        <a href="https://github.com/jevdboi3303" target="_blank" rel="noopener" title="GitHub">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        </a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="now-card tilt-card">
-        <p class="now-label">⚡ Now</p>
-        <div class="now-row">
-          <span class="now-key">Building</span>
-          <span class="now-val">CoopLens · ScholarU</span>
-        </div>
-        <div class="now-row">
-          <span class="now-key">Learning</span>
-          <span class="now-val">Distributed systems · LLM tooling</span>
-        </div>
-        <div class="now-row">
-          <span class="now-key">Reading</span>
-          <span class="now-val">Designing Data-Intensive Apps</span>
-        </div>
-        <div class="now-row">
-          <span class="now-key">Playing</span>
-          <span class="now-val">Cricket · Basketball · Football</span>
-        </div>
-        <div class="now-row">
-          <span class="now-key">Based in</span>
-          <span class="now-val">Victoria, BC 🍁</span>
-        </div>
-        <footer class="now-footer">
-          <span class="now-dot"></span> Updated October 2026
-        </footer>
-      </div>
-    </div>
-    <div class="scroll-hint">
-      <span>scroll</span>
-      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- MARQUEE -->
-  <div class="marquee-section">
-    <div class="marquee-track">
-      <div class="marquee-content">
-        <span>Full-Stack Dev</span><span class="dot">✦</span>
-        <span>Sports Lover</span><span class="dot">✦</span>
-        <span>React &amp; TypeScript</span><span class="dot">✦</span>
-        <span>Machine Learning</span><span class="dot">✦</span>
-        <span>UVic CS</span><span class="dot">✦</span>
-        <span>Cricket</span><span class="dot">✦</span>
-        <span>Open Source</span><span class="dot">✦</span>
-        <span>Basketball</span><span class="dot">✦</span>
-        <span>Python</span><span class="dot">✦</span>
-        <span>Football</span><span class="dot">✦</span>
-        <span>Problem Solver</span><span class="dot">✦</span>
-        <span>Victoria BC</span><span class="dot">✦</span>
-        <span>Team Player</span><span class="dot">✦</span>
-        <span>AWS</span><span class="dot">✦</span>
-        <span>Always Learning</span><span class="dot">✦</span>
+  <!-- WORK / PROJECTS -->
+  <section id="work">
+    <div class="section-inner">
+      <div class="section-label reveal">
+        <span class="section-label-dot"></span>
+        SELECTED WORK
       </div>
-      <!-- duplicate for seamless loop -->
-      <div class="marquee-content" aria-hidden="true">
-        <span>Full-Stack Dev</span><span class="dot">✦</span>
-        <span>Sports Lover</span><span class="dot">✦</span>
-        <span>React &amp; TypeScript</span><span class="dot">✦</span>
-        <span>Machine Learning</span><span class="dot">✦</span>
-        <span>UVic CS</span><span class="dot">✦</span>
-        <span>Cricket</span><span class="dot">✦</span>
-        <span>Open Source</span><span class="dot">✦</span>
-        <span>Basketball</span><span class="dot">✦</span>
-        <span>Python</span><span class="dot">✦</span>
-        <span>Football</span><span class="dot">✦</span>
-        <span>Problem Solver</span><span class="dot">✦</span>
-        <span>Victoria BC</span><span class="dot">✦</span>
-        <span>Team Player</span><span class="dot">✦</span>
-        <span>AWS</span><span class="dot">✦</span>
-        <span>Always Learning</span><span class="dot">✦</span>
-      </div>
-    </div>
-  </div>
+      <div class="project-list">
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title">About <span class="accent">Me</span></h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>I'm a Computer Science student at the <strong>University of Victoria</strong> (specializing in Software Systems), with hands-on experience building full-stack products that solve real problems.</p>
-          <p>I've completed two industry co-ops: <strong>Full Stack Developer at BaroShift</strong>, shipping React + TypeScript admin dashboards in an Agile environment, and currently a <strong>Computer Helpdesk Analyst at UVic</strong>. I care about clean code, great UX, and shipping things that actually get used.</p>
-          <p>Outside of code I serve as a <strong>Community Leader</strong> in UVic residences — supporting 60+ students through mentorship, events, and crisis response.</p>
-          <div class="about-stats">
-            <div class="stat"><span class="stat-num" data-count="4" data-suffix="+">0</span><span class="stat-label">Years building</span></div>
-            <div class="stat"><span class="stat-num" data-count="98" data-suffix="%">0</span><span class="stat-label">CS50 score</span></div>
-            <div class="stat"><span class="stat-num" data-count="5" data-suffix="">0</span><span class="stat-label">Major projects</span></div>
-          </div>
-        </div>
-        <div class="about-edu">
-          <h3>Education</h3>
-          <div class="edu-card">
-            <div class="edu-icon">🎓</div>
-            <div>
-              <h4>University of Victoria</h4>
-              <p class="edu-degree">B.Sc. Computer Science — Software Systems</p>
-              <p class="edu-meta">Jan 2024 – Present · Victoria, BC</p>
-              <p class="edu-courses">Algorithms, Software Dev Methods, Networks, HCI, Data Mining, Probability &amp; Statistics</p>
+        <a href="#" class="project-row reveal">
+          <div class="project-row-left">
+            <h3 class="project-name">CoopLens</h3>
+            <p class="project-meta">Personal Project, '26 — A 90MB model hit a deploy limit. I made it 5MB.</p>
+            <div class="project-tags">
+              <span>Python</span><span>SQL</span><span>React</span>
             </div>
           </div>
-          <div class="edu-card">
-            <div class="edu-icon">📚</div>
-            <div>
-              <h4>JBCN International School</h4>
-              <p class="edu-degree">IB Diploma — HL: CS, Mathematics, Physics</p>
-              <p class="edu-meta">Jun 2021 – May 2023 · Mumbai, India</p>
+          <span class="project-arrow">→</span>
+        </a>
+
+        <a href="https://scholar-uvic.vercel.app/" target="_blank" rel="noopener" class="project-row reveal">
+          <div class="project-row-left">
+            <h3 class="project-name">ScholarU</h3>
+            <p class="project-meta">Self-directed, '24–present — Finding scholarships shouldn't take 2 hours.</p>
+            <div class="project-tags">
+              <span>Full Stack</span><span>React</span>
             </div>
           </div>
-        </div>
+          <span class="project-arrow">→</span>
+        </a>
+
+        <a href="#" class="project-row reveal">
+          <div class="project-row-left">
+            <h3 class="project-name">Web Notes</h3>
+            <p class="project-meta">Hackathon 2nd Place, '25 — Annotate any webpage without switching tabs.</p>
+            <div class="project-tags">
+              <span>Chrome Extension</span><span>Supabase</span>
+            </div>
+          </div>
+          <span class="project-arrow">→</span>
+        </a>
+
+        <a href="#" class="project-row reveal">
+          <div class="project-row-left">
+            <h3 class="project-name">DermaCheck</h3>
+            <p class="project-meta">Personal Project, '22–'24 — Early melanoma detection from camera images.</p>
+            <div class="project-tags">
+              <span>Python</span><span>ML</span>
+            </div>
+          </div>
+          <span class="project-arrow">→</span>
+        </a>
+
       </div>
     </div>
   </section>
 
   <!-- EXPERIENCE -->
-  <section id="experience" class="section section-dark">
-    <div class="container">
-      <h2 class="section-title">Experience</h2>
-      <div class="timeline">
+  <section id="experience">
+    <div class="section-inner">
+      <div class="section-label reveal">
+        <span class="section-label-dot"></span>
+        EXPERIENCE
+      </div>
+      <div class="exp-list">
 
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card tl-featured">
-            <div class="tl-header">
-              <div>
-                <span class="tl-badge">AI Startup · Co-op</span>
-                <h3>Full Stack Developer Co-op</h3>
-                <p class="tl-company">BaroShift <span class="tl-faded">(formerly MyTorso.ai)</span></p>
-              </div>
-              <span class="tl-date">Jan – Apr 2026</span>
-            </div>
-            <p class="tl-location">📍 Vancouver, BC (Remote)</p>
-            <ul class="tl-bullets">
-              <li>Delivered every sprint commitment across a 4-month <strong>Agile/Kanban</strong> term — user-story ownership, daily updates, code review, and early blocker flagging.</li>
-              <li>Extended a largely undocumented <strong>authentication and session codebase</strong>: read and mapped the system before writing, then added features (user data override, audit logging, session management) without regressions.</li>
-              <li>Sole front-end engineer in <strong>React, TypeScript, and Tailwind CSS</strong> with AWS Cognito — owned full feature cycle from design to deployment, reducing manual overhead by ~40%.</li>
-            </ul>
-            <div class="tl-tags">
-              <span>React</span><span>TypeScript</span><span>Tailwind CSS</span><span>AWS Cognito</span><span>Agile/Kanban</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="tl-header">
-              <div>
-                <span class="tl-badge">University · Co-op</span>
-                <h3>Computer Helpdesk Analyst Co-op</h3>
-                <p class="tl-company">UVic University Systems, Computer Help Desk</p>
-              </div>
-              <span class="tl-date">Sep – Dec 2026</span>
-            </div>
-            <p class="tl-location">📍 Victoria, BC</p>
-            <ul class="tl-bullets">
+        <div class="exp-row reveal">
+          <div class="exp-left">
+            <h3 class="exp-title">Computer Helpdesk Analyst Co-op</h3>
+            <p class="exp-company">UVic University Systems, Computer Help Desk</p>
+            <ul class="exp-bullets">
               <li>Investigate, reproduce, and resolve user-reported technical issues — documenting each case and confirming the fix before closing.</li>
             </ul>
-            <div class="tl-tags">
-              <span>Technical Support</span><span>Troubleshooting</span><span>Documentation</span><span>Linux</span>
-            </div>
           </div>
+          <span class="exp-date">Sep – Dec 2026</span>
         </div>
 
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="tl-header">
-              <div>
-                <h3>Community Leader</h3>
-                <p class="tl-company">UVic Residence Services</p>
-              </div>
-              <span class="tl-date">Apr 2025 – Present</span>
-            </div>
-            <p class="tl-location">📍 Victoria, BC</p>
-            <ul class="tl-bullets">
-              <li>Support a residence community of <strong>60+ students</strong> through peer mentoring, event programming, and first-response crisis intervention.</li>
-              <li>Developed conflict-resolution and de-escalation skills while coordinating with university staff and student services.</li>
+        <div class="exp-row reveal">
+          <div class="exp-left">
+            <h3 class="exp-title">Full Stack Developer Co-op</h3>
+            <p class="exp-company">BaroShift (formerly MyTorso.ai)</p>
+            <ul class="exp-bullets">
+              <li>Delivered every sprint commitment across a 4-month Agile/Kanban term — user-story ownership, daily updates, and early blocker flagging.</li>
+              <li>Extended a largely undocumented auth and session codebase; added features without regressions.</li>
+              <li>Sole front-end engineer in React, TypeScript, and Tailwind CSS with AWS Cognito — reduced manual overhead ~40%.</li>
             </ul>
           </div>
+          <span class="exp-date">Jan – Apr 2026</span>
+        </div>
+
+        <div class="exp-row reveal">
+          <div class="exp-left">
+            <h3 class="exp-title">Community Leader</h3>
+            <p class="exp-company">UVic Residence Services</p>
+            <ul class="exp-bullets">
+              <li>Support a residence community of 60+ students through mentorship, events, and first-response crisis intervention.</li>
+            </ul>
+          </div>
+          <span class="exp-date">Apr 2025 – Present</span>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section section-dark">
-    <div class="container">
-      <h2 class="section-title">Projects</h2>
-      <div class="timeline">
-
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card tl-featured">
-            <div class="tl-header">
-              <div>
-                <h3>CoopLens <span class="tl-faded">· 🔍</span></h3>
-                <p class="tl-company">Problem-Solving Under Constraints</p>
-              </div>
-              <span class="tl-date">May 2026 – Present</span>
-            </div>
-            <p class="project-hook">A 90MB model hit a hard deploy limit — so I made it 5MB instead.</p>
-            <ul class="tl-bullets">
-              <li>Hit a hard resource constraint and solved within it rather than scaling out: benchmarked alternatives and <strong>cut model footprint 95%</strong> (90MB → 5MB) while preserving output quality.</li>
-              <li>Backed by a <strong>Python service</strong> with SQL persistence over 200+ records and a <strong>React dashboard</strong>.</li>
-            </ul>
-            <div class="tl-tags">
-              <span>Python</span><span>SQL</span><span>React</span><span>ML Optimization</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="tl-header">
-              <div>
-                <div class="project-badge">🏆 Hackathon 2nd Place</div>
-                <h3>Web Notes <span class="tl-faded">· 📝</span></h3>
-                <p class="tl-company">Chrome Extension · Note-taking on the web</p>
-              </div>
-              <span class="tl-date">2025</span>
-            </div>
-            <p class="project-hook">Reading something important shouldn't mean switching tabs to take notes.</p>
-            <ul class="tl-bullets">
-              <li>Chrome extension that lets you annotate and save notes directly on any webpage, synced in real-time via <strong>Supabase</strong>.</li>
-              <li>Built end-to-end at a hackathon and placed <strong>2nd</strong>.</li>
-            </ul>
-            <div class="tl-tags">
-              <span>Chrome Extension</span><span>Supabase</span><span>JavaScript</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="tl-header">
-              <div>
-                <h3><a href="https://scholar-uvic.vercel.app/" target="_blank" rel="noopener" class="project-link">ScholarU</a> <span class="tl-faded">· 🎓</span></h3>
-                <p class="tl-company">Scholarship Discovery Platform</p>
-              </div>
-              <span class="tl-date">May 2024 – Present</span>
-            </div>
-            <p class="project-hook">UVic students were missing scholarships buried in PDFs and outdated portals.</p>
-            <ul class="tl-bullets">
-              <li>Full-stack search tool filtering by academic year, faculty, gender, and more.</li>
-              <li>Reduced average discovery time from <strong>~2 hours to under 5 minutes</strong>. Actively used by CS peers.</li>
-            </ul>
-            <div class="tl-tags">
-              <span>Full Stack</span><span>React</span><span>Search &amp; Filtering</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="tl-header">
-              <div>
-                <h3>DermaCheck <span class="tl-faded">· 🩺</span></h3>
-                <p class="tl-company">AI Skin Condition Classifier</p>
-              </div>
-              <span class="tl-date">2022 – 2024</span>
-            </div>
-            <p class="project-hook">Early melanoma detection shouldn't require a specialist waitlist.</p>
-            <ul class="tl-bullets">
-              <li>ML model classifying skin lesions from camera images with high accuracy on fine-grained visual variation.</li>
-              <li>End-to-end patient pipeline with video calling and blockchain-based health records.</li>
-            </ul>
-            <div class="tl-tags">
-              <span>Machine Learning</span><span>Python</span><span>Computer Vision</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="tl-header">
-              <div>
-                <h3>Accident Prevention System <span class="tl-faded">· 🚗</span></h3>
-                <p class="tl-company">ML Mobile App</p>
-              </div>
-              <span class="tl-date">2022 – 2023</span>
-            </div>
-            <p class="project-hook">Distracted driving causes most accidents — ML can flag hazards before they happen.</p>
-            <ul class="tl-bullets">
-              <li>ML-powered real-time hazard detection with driver push alerts.</li>
-              <li>Led the full design-to-deployment cycle in Adobe XD — wireframes, branding, and animation.</li>
-            </ul>
-            <div class="tl-tags">
-              <span>Machine Learning</span><span>Mobile</span><span>Adobe XD</span><span>UI/UX</span>
-            </div>
-          </div>
-        </div>
-
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-label reveal">
+        <span class="section-label-dot"></span>
+        ABOUT ME
       </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="section section-dark">
-    <div class="container">
-      <h2 class="section-title">Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-group reveal">
-          <h3>Languages</h3>
-          <div class="skill-pills">
-            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" />C</span>
-            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />Python</span>
-            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />JavaScript</span>
-            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" />TypeScript</span>
-            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />Java</span>
-            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" />SQL</span>
-          </div>
+      <h2 class="about-headline reveal">
+        I'm a CS student who writes real code,<br />
+        solves real problems &amp; <em>ships things people use.</em>
+      </h2>
+      <div class="about-grid">
+        <div class="about-bio reveal">
+          <p>I'm studying Computer Science (Software Systems) at the University of Victoria. I've completed two industry co-ops and built projects from scratch — end-to-end.</p>
+          <p>I care about code that's clean, products that work, and teams that move fast. I'm methodical, comfortable learning unfamiliar codebases, and always building.</p>
+          <p>Outside code: cricket, basketball, football, and currently reading Designing Data-Intensive Applications.</p>
         </div>
-        <div class="skill-group reveal">
-          <h3>CS Fundamentals</h3>
-          <div class="skill-pills">
-            <span class="skill-pill">⚙️ Data Structures &amp; Algorithms</span>
-            <span class="skill-pill">🧠 Memory Management</span>
-            <span class="skill-pill">🏛️ Computer Architecture</span>
-            <span class="skill-pill">🔷 OOP</span>
-          </div>
-        </div>
-        <div class="skill-group reveal">
-          <h3>Frontend</h3>
-          <div class="skill-pills">
-            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />React</span>
-            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" />Tailwind CSS</span>
-            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />HTML / CSS</span>
-          </div>
-        </div>
-        <div class="skill-group reveal">
-          <h3>Tools &amp; Practices</h3>
-          <div class="skill-pills">
-            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />Git</span>
-            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="filter:invert(1) brightness(2)"/>GitHub</span>
-            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" />Linux / CLI</span>
-            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" />AWS</span>
-            <span class="skill-pill">🔄 Agile / Scrum &amp; Kanban</span>
-          </div>
-        </div>
-        <div class="skill-group reveal">
-          <h3>Spoken Languages</h3>
-          <div class="skill-pills">
-            <span class="skill-pill">🇬🇧 English</span>
-            <span class="skill-pill">🇪🇸 Spanish</span>
-            <span class="skill-pill">🇮🇳 Tamil</span>
-            <span class="skill-pill">🇮🇳 Hindi</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="certs-section">
-        <h3>Certifications</h3>
-        <div class="certs-grid">
-          <div class="cert-card reveal">
-            <span class="cert-icon">☁️</span>
-            <div>
-              <h4>AWS Cloud Practitioner — Coursera</h4>
-              <p>Foundations of AWS cloud services, architecture, security, and pricing. <a href="https://www.coursera.org/account/accomplishments/verify/FL9FZE4ZIRCS" target="_blank" rel="noopener" class="cert-link">Verify ↗</a></p>
-              <span class="cert-date">Jun 2026</span>
+        <div class="about-right reveal">
+          <div class="about-sub-section">
+            <div class="about-sub-label">EDUCATION</div>
+            <div class="edu-list">
+              <div class="edu-row">
+                <div class="edu-row-left">
+                  <p class="edu-school">University of Victoria</p>
+                  <p class="edu-degree">B.Sc. Computer Science, Software Systems</p>
+                </div>
+                <span class="edu-date">Jan 2024 – Present</span>
+              </div>
+              <div class="edu-row">
+                <div class="edu-row-left">
+                  <p class="edu-school">JBCN International School</p>
+                  <p class="edu-degree">IB Diploma (HL: CS, Math, Physics)</p>
+                </div>
+                <span class="edu-date">2021 – 2023</span>
+              </div>
             </div>
           </div>
-          <div class="cert-card reveal">
-            <span class="cert-icon">🏛️</span>
-            <div>
-              <h4>CS50 — Harvard University</h4>
-              <p>Scored <strong>98%</strong> · C, Python, SQL, JavaScript · Capstone: Smart Unlock (facial-recognition security app)</p>
-              <span class="cert-date">Jun – Sep 2022</span>
-            </div>
-          </div>
-          <div class="cert-card reveal">
-            <span class="cert-icon">🐍</span>
-            <div>
-              <h4>Scientific Computing with Python — freeCodeCamp</h4>
-              <p>5 advanced Python projects covering scientific computation, data formatting, and CLI tooling.</p>
-              <span class="cert-date">Sep – Dec 2022</span>
+          <div class="about-sub-section">
+            <div class="about-sub-label">SKILLS</div>
+            <div class="skills-list">
+              <div class="skill-row">
+                <span class="skill-cat">Languages</span>
+                <span class="skill-items">C · Python · JavaScript · TypeScript · Java · SQL</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-cat">CS Fundamentals</span>
+                <span class="skill-items">Algorithms &amp; Data Structures · Memory Management · Computer Architecture</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-cat">Frontend</span>
+                <span class="skill-items">React · Tailwind CSS · HTML / CSS</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-cat">Tools &amp; Practices</span>
+                <span class="skill-items">Git · GitHub · Linux / CLI · Agile / Scrum &amp; Kanban · AWS</span>
+              </div>
+              <div class="skill-row">
+                <span class="skill-cat">Spoken</span>
+                <span class="skill-items">English · Spanish · Tamil · Hindi</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="container contact-container">
-      <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
-      <p class="contact-sub">I'm open to internships, co-op roles, and interesting projects. Feel free to reach out.</p>
-      <div class="contact-cards">
-        <a href="mailto:harsadh32@gmail.com" class="contact-card">
-          <span class="contact-icon">✉️</span>
-          <span>harsadh32@gmail.com</span>
-        </a>
-        <a href="https://github.com/jevdboi3303" target="_blank" rel="noopener" class="contact-card">
-          <span class="contact-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-          </span>
-          <span>github.com/jevdboi3303</span>
-        </a>
-        <div class="contact-card no-link">
-          <span class="contact-icon">📍</span>
-          <span>Victoria, BC, Canada</span>
-        </div>
-      </div>
-      <a href="mailto:harsadh32@gmail.com" class="btn-primary btn-large">Say Hello</a>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <p>Designed &amp; built by Harsadh Vikhaas Rajesh Kumar · 2026</p>
+  <footer id="contact">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-left">
+          <h2 class="footer-heading">Let's work <em>together.</em></h2>
+          <a href="mailto:harsadh32@gmail.com" class="footer-email">harsadh32@gmail.com ↗</a>
+        </div>
+        <div class="footer-links-grid">
+          <div class="footer-links-col">
+            <p class="footer-col-label">SOCIAL</p>
+            <a href="https://github.com/jevdboi3303" target="_blank" rel="noopener" class="footer-link">GitHub ↗</a>
+          </div>
+          <div class="footer-links-col">
+            <p class="footer-col-label">CONTACT</p>
+            <a href="mailto:harsadh32@gmail.com" class="footer-link">Email ↗</a>
+            <a href="https://linkedin.com/in/harsadh" target="_blank" rel="noopener" class="footer-link">LinkedIn ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Harsadh Vikhaas Rajesh Kumar · 2026</span>
+        <span>Victoria, BC, Canada</span>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
