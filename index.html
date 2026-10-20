@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital@1&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -51,14 +51,24 @@
           <span class="dot-yellow"></span>
           <span class="dot-green"></span>
         </div>
+        <div class="window-url-bar">harsadh.me</div>
       </div>
       <div class="window-body">
         <h1 class="hero-headline">
           I build software,<br />systems &amp; <em>solutions.</em>
         </h1>
-        <div class="hero-sub">
-          <p class="hero-sub-primary">Full-stack developer. Based in Victoria, BC.</p>
-          <p class="hero-sub-secondary">Seeking Jan 2027 co-op · Previously BaroShift &amp; UVic Systems</p>
+        <div class="hero-bottom">
+          <div class="hero-terminal">
+            <div class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">git log --oneline -3</span></div>
+            <div class="term-out">d3cc14d  content: fix links, strengthen CoopLens</div>
+            <div class="term-out">8d5e910  feat: redesign — Perry Wang inspired</div>
+            <div class="term-out term-dim">4ec8a56  feat: sync portfolio with resume</div>
+            <div class="term-line"><span class="term-prompt">$</span> <span class="term-cursor"></span></div>
+          </div>
+          <div class="hero-sub">
+            <p class="hero-sub-primary">Full-stack developer. Based in Victoria, BC.</p>
+            <p class="hero-sub-secondary">Seeking Jan 2027 co-op · Previously BaroShift &amp; UVic Systems</p>
+          </div>
         </div>
       </div>
     </div>
@@ -81,6 +91,9 @@
               <span>Chrome Extension</span><span>FastAPI</span><span>React</span><span>Llama 3.3</span>
             </div>
           </div>
+          <div class="project-preview">
+            <img src="images/cooplens.png" alt="CoopLens preview" loading="lazy" />
+          </div>
           <span class="project-arrow">→</span>
         </a>
 
@@ -92,6 +105,7 @@
               <span>Full Stack</span><span>React</span>
             </div>
           </div>
+          <!-- drop a screenshot at images/scholaru.png to enable hover preview -->
           <span class="project-arrow">→</span>
         </a>
 
@@ -180,6 +194,10 @@
       </h2>
       <div class="about-grid">
         <div class="about-bio reveal">
+          <!-- Replace images/photo.jpg with your headshot to show the photo card -->
+          <div class="about-photo">
+            <span class="about-photo-initials">HV</span>
+          </div>
           <p>I'm studying Computer Science (Software Systems) at the University of Victoria. I've completed two industry co-ops, scored 98% on CS50 (Harvard), and built projects from scratch — end-to-end.</p>
           <p>I care about code that's clean, products that work, and teams that move fast. I'm methodical, comfortable learning unfamiliar codebases, and always building.</p>
           <p>Outside code: cricket, basketball, football, and currently reading Designing Data-Intensive Applications.</p>
