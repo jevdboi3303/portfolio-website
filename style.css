@@ -528,6 +528,12 @@ section:not(#hero) {
   color: var(--muted);
 }
 
+.cert-link {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .edu-date {
   font-size: 12px;
   color: var(--muted);
