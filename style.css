@@ -964,3 +964,8 @@ footer {
     transform: none;
   }
 }
+
+.exp-bullets strong {
+  color: var(--text);
+  font-weight: 500;
+}
