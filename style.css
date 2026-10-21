@@ -236,7 +236,7 @@ a { text-decoration: none; color: inherit; }
 
 .hero-sub {
   text-align: right;
-  max-width: 300px;
+  max-width: 380px;
 }
 
 .hero-sub-primary {
@@ -701,7 +701,7 @@ footer {
 .term-line { display: flex; gap: 8px; }
 .term-prompt { color: rgba(242, 242, 242, 0.3); user-select: none; }
 .term-cmd { color: var(--text); }
-.term-out { color: var(--muted); padding-left: 16px; }
+.term-out { color: var(--muted); padding-left: 16px; white-space: pre; }
 .term-dim { color: rgba(242, 242, 242, 0.2); }
 .term-cursor {
   display: inline-block;
