@@ -4,13 +4,42 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harsadh Vikhaas — Software Developer</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="description" content="Harsadh Vikhaas is a full-stack developer and CS student at the University of Victoria building apps, Chrome extensions and AI tools. Open to Jan 2027 co-op roles." />
+  <meta name="theme-color" content="#101010" />
+  <link rel="canonical" href="https://harsadh.me/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://harsadh.me/" />
+  <meta property="og:title" content="Harsadh Vikhaas — Software Developer" />
+  <meta property="og:description" content="Full-stack developer and UVic CS student building apps, Chrome extensions and AI tools. Open to Jan 2027 co-op roles." />
+  <meta property="og:image" content="https://harsadh.me/images/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="harsadh.me — I build full-stack apps & AI tools." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Harsadh Vikhaas",
+      "url": "https://harsadh.me/",
+      "image": "https://harsadh.me/images/photo.jpg",
+      "jobTitle": "Software Developer",
+      "alumniOf": "University of Victoria",
+      "sameAs": [
+        "https://github.com/jevdboi3303",
+        "https://linkedin.com/in/harsadh-vikhaas"
+      ]
+    }
+  </script>  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital@1&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <a href="#work" class="skip-link">Skip to content</a>
 
   <!-- NAV -->
   <nav id="navbar">
@@ -20,14 +49,14 @@
         <span class="nav-role">Software Developer</span>
       </div>
       <div class="nav-pill" id="nav-pill">
-        <a href="#work" class="nav-pill-tab active" data-section="work">Work</a>
+        <a href="#work" class="nav-pill-tab active" data-section="work" aria-current="true">Work</a>
         <a href="#about" class="nav-pill-tab" data-section="about">About</a>
       </div>
       <div class="nav-right">
         <a href="https://github.com/jevdboi3303" target="_blank" rel="noopener" class="nav-link">GitHub ↗</a>
         <a href="resume.pdf" download class="nav-link">Resume ↗</a>
       </div>
-      <button class="burger" id="burger" aria-label="Toggle menu">
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -41,6 +70,8 @@
     <a href="resume.pdf" download class="mobile-link">Resume ↗</a>
     <a href="mailto:harsadh32@gmail.com" class="mobile-link">Email ↗</a>
   </div>
+
+  <main>
 
   <!-- HERO -->
   <section id="hero">
@@ -287,6 +318,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer id="contact">

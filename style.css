@@ -28,6 +28,31 @@ body {
 
 a { text-decoration: none; color: inherit; }
 
+/* Visible keyboard focus everywhere */
+:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Skip link — hidden until focused */
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -48px;
+  z-index: 200;
+  background: var(--text);
+  color: var(--bg);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
 /* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
@@ -135,6 +160,11 @@ a { text-decoration: none; color: inherit; }
   border-radius: 2px;
   transition: var(--transition);
 }
+
+/* Burger → X when the menu is open (span height 1.5px + gap 5px = 6.5px) */
+.burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
 /* ── Mobile Menu ── */
 .mobile-menu {
@@ -800,13 +830,13 @@ footer {
 
 
 /* ── Reveal animation ── */
-.reveal {
+.js .reveal {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.reveal.visible {
+.js .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -907,7 +937,7 @@ footer {
 
 /* ── Reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  .js .reveal {
     transition: none;
     opacity: 1;
     transform: none;
