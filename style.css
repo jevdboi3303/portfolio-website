@@ -771,13 +771,6 @@ footer {
   object-fit: cover;
 }
 
-.about-photo-initials {
-  font-size: 40px;
-  font-weight: 700;
-  color: var(--subtle);
-  letter-spacing: -0.02em;
-  user-select: none;
-}
 
 /* ── Reveal animation ── */
 .reveal {
