@@ -85,120 +85,66 @@
       <div class="project-list">
 
         <article class="project reveal">
-          <div class="project-head">
-            <div>
-              <p class="project-kicker">Personal Project · May 2026 – Present</p>
-              <h3 class="project-name">CoopLens</h3>
-              <p class="project-summary">A Chrome extension that scores UVic co-op postings against your resume in real time, so you know what's worth applying to before you read the whole thing.</p>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/jevdboi3303/cooplens" target="_blank" rel="noopener">Code ↗</a>
-            </div>
+          <div class="project-id">
+            <span class="project-num">01</span>
+            <p class="project-kicker">Personal Project · May 2026 – Present</p>
+            <h3 class="project-name">CoopLens</h3>
+            <p class="project-summary">A Chrome extension that scores UVic co-op postings against your resume in real time, so you know what's worth applying to before you read the whole thing.</p>
+            <div class="project-tags"><span>Chrome MV3</span><span>FastAPI</span><span>Supabase Postgres</span><span>React</span><span>Llama 3.3 70B</span></div>
+            <div class="project-links"><a href="https://github.com/jevdboi3303/cooplens" target="_blank" rel="noopener">View code <span aria-hidden="true">↗</span></a></div>
           </div>
           <dl class="case-study">
-            <div>
-              <dt>Problem</dt>
-              <dd>Students sift through co-op postings one at a time, with no quick way to judge fit, spot red flags, or see which skills their resume is missing.</dd>
-            </div>
-            <div>
-              <dt>Approach</dt>
-              <dd>An MV3 extension injects a score panel on each posting. A FastAPI backend has Llama 3.3 70B rate CV match (45%), posting clarity (30%) and company quality (25%), then flags red flags and keyword gaps.</dd>
-            </div>
-            <div>
-              <dt>Result</dt>
-              <dd>The 90MB embedding model wouldn't fit Railway's free tier, so I replaced it with a 5MB TF-IDF fallback, <strong>95% smaller</strong>, which also keeps scoring working when the LLM API is down.</dd>
-            </div>
+            <div><dt>Problem</dt><dd>Students sift through co-op postings one at a time, with no quick way to judge fit, spot red flags, or see which skills their resume is missing.</dd></div>
+            <div><dt>Approach</dt><dd>An MV3 extension injects a score panel on each posting. A FastAPI backend has Llama 3.3 70B rate CV match (45%), posting clarity (30%) and company quality (25%), then flags red flags and keyword gaps.</dd></div>
+            <div><dt>Result</dt><dd>The 90MB embedding model wouldn't fit Railway's free tier, so I replaced it with a 5MB TF-IDF fallback, <strong>95% smaller</strong>, which also keeps scoring working when the LLM API is down.</dd></div>
           </dl>
-          <div class="project-tags">
-            <span>Chrome MV3</span><span>FastAPI</span><span>Supabase Postgres</span><span>React</span><span>Llama 3.3 70B</span>
-          </div>
         </article>
 
         <article class="project reveal">
-          <div class="project-head">
-            <div>
-              <p class="project-kicker">Personal Project · May 2024 – Present</p>
-              <h3 class="project-name">ScholarU</h3>
-              <p class="project-summary">A scholarship finder for UVic students: search and filter every award in one place, then save the ones you want and track their deadlines.</p>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/jevdboi3303/scholar-u" target="_blank" rel="noopener">Code ↗</a>
-            </div>
+          <div class="project-id">
+            <span class="project-num">02</span>
+            <p class="project-kicker">Personal Project · May 2024 – Present</p>
+            <h3 class="project-name">ScholarU</h3>
+            <p class="project-summary">A scholarship finder for UVic students: search and filter every award in one place, then save the ones you want and track their deadlines.</p>
+            <div class="project-tags"><span>Next.js 15</span><span>TypeScript</span><span>Supabase</span><span>Tailwind CSS</span></div>
+            <div class="project-links"><a href="https://github.com/jevdboi3303/scholar-u" target="_blank" rel="noopener">View code <span aria-hidden="true">↗</span></a></div>
           </div>
           <dl class="case-study">
-            <div>
-              <dt>Problem</dt>
-              <dd>Finding scholarships you actually qualify for meant around two hours of manually browsing UVic's awards database.</dd>
-            </div>
-            <div>
-              <dt>Approach</dt>
-              <dd>A scraper pulls 1,300+ awards from the UVic awards API into Supabase Postgres. A Next.js app adds full-text search, filters for faculty, GPA and eligibility, and deadline tracking.</dd>
-            </div>
-            <div>
-              <dt>Result</dt>
-              <dd>Discovery time cut from <strong>~2 hours to under 5 minutes</strong>; actively used by peers in the CS faculty.</dd>
-            </div>
+            <div><dt>Problem</dt><dd>Finding scholarships you actually qualify for meant around two hours of manually browsing UVic's awards database.</dd></div>
+            <div><dt>Approach</dt><dd>A scraper pulls 1,300+ awards from the UVic awards API into Supabase Postgres. A Next.js app adds full-text search, filters for faculty, GPA and eligibility, and deadline tracking.</dd></div>
+            <div><dt>Result</dt><dd>Discovery time cut from <strong>~2 hours to under 5 minutes</strong>; actively used by peers in the CS faculty.</dd></div>
           </dl>
-          <div class="project-tags">
-            <span>Next.js 15</span><span>TypeScript</span><span>Supabase</span><span>Tailwind CSS</span>
-          </div>
         </article>
 
         <article class="project reveal">
-          <div class="project-head">
-            <div>
-              <p class="project-kicker">Hackathon · 2nd Place · 2025</p>
-              <h3 class="project-name">Web Notes</h3>
-              <p class="project-summary">A Chrome extension that adds a public layer of notes and discussion to any webpage.</p>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/jevdboi3303/web-notes" target="_blank" rel="noopener">Code ↗</a>
-            </div>
+          <div class="project-id">
+            <span class="project-num">03</span>
+            <p class="project-kicker">Hackathon · 2nd Place · 2025</p>
+            <h3 class="project-name">Web Notes</h3>
+            <p class="project-summary">A Chrome extension that adds a public layer of notes and discussion to any webpage.</p>
+            <div class="project-tags"><span>Chrome MV3</span><span>JavaScript</span><span>Supabase</span></div>
+            <div class="project-links"><a href="https://github.com/jevdboi3303/web-notes" target="_blank" rel="noopener">View code <span aria-hidden="true">↗</span></a></div>
           </div>
           <dl class="case-study">
-            <div>
-              <dt>Problem</dt>
-              <dd>Conversations about a webpage happen somewhere else, so there's no way to leave context on the page itself for the next reader.</dd>
-            </div>
-            <div>
-              <dt>Approach</dt>
-              <dd>Highlight text to anchor a note to it; a sidebar (Alt+N) shows everyone's notes for that page, backed by Supabase auth and Postgres.</dd>
-            </div>
-            <div>
-              <dt>Result</dt>
-              <dd>Rendering the sidebar in a Shadow DOM keeps it from clashing with any site's CSS. Placed <strong>2nd</strong> at the hackathon.</dd>
-            </div>
+            <div><dt>Problem</dt><dd>Conversations about a webpage happen somewhere else, so there's no way to leave context on the page itself for the next reader.</dd></div>
+            <div><dt>Approach</dt><dd>Highlight text to anchor a note to it; a sidebar (Alt+N) shows everyone's notes for that page, backed by Supabase auth and Postgres.</dd></div>
+            <div><dt>Result</dt><dd>Rendering the sidebar in a Shadow DOM keeps it from clashing with any site's CSS. Placed <strong>2nd</strong> at the hackathon.</dd></div>
           </dl>
-          <div class="project-tags">
-            <span>Chrome MV3</span><span>JavaScript</span><span>Supabase</span>
-          </div>
         </article>
 
         <article class="project reveal">
-          <div class="project-head">
-            <div>
-              <p class="project-kicker">Personal Project · 2022 – 2024</p>
-              <h3 class="project-name">DermaCheck</h3>
-              <p class="project-summary">An ML skin-lesion classifier that connects patients with dermatologists.</p>
-            </div>
+          <div class="project-id">
+            <span class="project-num">04</span>
+            <p class="project-kicker">Personal Project · 2022 – 2024</p>
+            <h3 class="project-name">DermaCheck</h3>
+            <p class="project-summary">An ML skin-lesion classifier that connects patients with dermatologists.</p>
+            <div class="project-tags"><span>Python</span><span>Machine Learning</span></div>
           </div>
           <dl class="case-study">
-            <div>
-              <dt>Problem</dt>
-              <dd>Early-stage melanoma is easy to miss, and getting a dermatologist to look at a concern can take a long time.</dd>
-            </div>
-            <div>
-              <dt>Approach</dt>
-              <dd>Trained a machine-learning model in Python to classify skin lesions, including early-stage melanoma, from camera images.</dd>
-            </div>
-            <div>
-              <dt>Result</dt>
-              <dd>Built end to end: from classification to a patient-to-doctor flow with video calling and secure health records.</dd>
-            </div>
+            <div><dt>Problem</dt><dd>Early-stage melanoma is easy to miss, and getting a dermatologist to look at a concern can take a long time.</dd></div>
+            <div><dt>Approach</dt><dd>Trained a machine-learning model in Python to classify skin lesions, including early-stage melanoma, from camera images.</dd></div>
+            <div><dt>Result</dt><dd>Built end to end: from classification to a patient-to-doctor flow with video calling and secure health records.</dd></div>
           </dl>
-          <div class="project-tags">
-            <span>Python</span><span>Machine Learning</span>
-          </div>
         </article>
 
       </div>
